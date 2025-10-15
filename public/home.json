@@ -1,0 +1,146 @@
+[
+  {
+    "image": "https://example.com/images/fitnessplus.jpg",
+    "title": "Fitness Plus",
+    "companyName": "ActiveWell Labs",
+    "id": 1,
+    "description": "Fitness Plus helps users build personalized workout routines and track their progress with AI-based recommendations. It features a vast library of guided exercises, live trainer sessions, and goal-tracking tools. The app syncs with smartwatches to monitor heart rate and calories burned. Users can challenge friends in weekly fitness contests. Offline workout mode lets you stay active even without internet. Built-in meal planner offers nutrition advice. Integration with Apple Health and Google Fit ensures seamless tracking. The intuitive dashboard displays your improvement metrics. Regular updates add new workout programs every month. Your fitness, simplified and personalized.",
+    "size": 142,
+    "reviews": 8421,
+    "ratingAvg": 4.6,
+    "downloads": 1200000,
+    "ratings": [
+      { "name": "1 star", "count": 220 },
+      { "name": "2 star", "count": 340 },
+      { "name": "3 star", "count": 980 },
+      { "name": "4 star", "count": 2140 },
+      { "name": "5 star", "count": 4741 }
+    ]
+  },
+  {
+    "image": "https://example.com/images/foodhero.jpg",
+    "title": "Food Hero",
+    "companyName": "ByteBite Technologies",
+    "id": 2,
+    "description": "Food Hero is your personal kitchen companion that helps you cook like a pro. It recommends recipes based on what’s in your fridge. You can scan ingredients to get instant recipe ideas. The app includes a timer, portion calculator, and calorie tracker. Step-by-step cooking videos make complex dishes easy. Save your favorite recipes in personalized folders. The shopping list feature automatically adds missing ingredients. You can share meals with the Food Hero community. Get regional cuisines curated by expert chefs. Cooking has never been this interactive and fun.",
+    "size": 96,
+    "reviews": 6230,
+    "ratingAvg": 4.4,
+    "downloads": 890000,
+    "ratings": [
+      { "name": "1 star", "count": 310 },
+      { "name": "2 star", "count": 420 },
+      { "name": "3 star", "count": 870 },
+      { "name": "4 star", "count": 1860 },
+      { "name": "5 star", "count": 2770 }
+    ]
+  },
+  {
+    "image": "https://example.com/images/taskflow.jpg",
+    "title": "TaskFlow",
+    "companyName": "NexMind Apps",
+    "id": 3,
+    "description": "TaskFlow helps individuals and teams organize their workflow efficiently. Create, assign, and monitor tasks with real-time updates. The minimalist interface keeps your focus sharp and distractions low. Set deadlines, priorities, and progress checkpoints easily. TaskFlow supports team chat and comment threads per task. Built-in reminders help prevent missed deadlines. You can visualize tasks with Kanban and Gantt views. Integration with Slack and Google Calendar improves coordination. Analytics provide insight into productivity trends. Stay organized, stay ahead.",
+    "size": 81,
+    "reviews": 5123,
+    "ratingAvg": 4.5,
+    "downloads": 640000,
+    "ratings": [
+      { "name": "1 star", "count": 180 },
+      { "name": "2 star", "count": 260 },
+      { "name": "3 star", "count": 710 },
+      { "name": "4 star", "count": 1640 },
+      { "name": "5 star", "count": 2333 }
+    ]
+  },
+  {
+    "image": "https://example.com/images/medimate.jpg",
+    "title": "MediMate",
+    "companyName": "CareSync Health",
+    "id": 4,
+    "description": "MediMate is a health management app that reminds you to take medications on time. It securely stores prescriptions and medical records. Users can schedule doctor appointments with in-app booking. The reminder system adjusts automatically for time zones. Family mode helps monitor loved ones’ medication schedules. The app also tracks vitals like blood pressure and sugar levels. Daily health tips promote better wellness habits. Secure cloud backup ensures your data is never lost. Users can chat with certified doctors for quick advice. A complete digital assistant for your healthcare routine.",
+    "size": 125,
+    "reviews": 9480,
+    "ratingAvg": 4.7,
+    "downloads": 1500000,
+    "ratings": [
+      { "name": "1 star", "count": 290 },
+      { "name": "2 star", "count": 310 },
+      { "name": "3 star", "count": 830 },
+      { "name": "4 star", "count": 2100 },
+      { "name": "5 star", "count": 5950 }
+    ]
+  },
+  {
+    "image": "https://example.com/images/langloop.jpg",
+    "title": "LangLoop",
+    "companyName": "EduNova Global",
+    "id": 5,
+    "description": "LangLoop makes learning new languages intuitive and engaging. It offers gamified lessons and real-world conversation simulations. Speech recognition checks your pronunciation accuracy instantly. Daily challenges encourage consistent practice. You can chat with native speakers around the world. The app supports offline lessons for uninterrupted learning. Vocabulary flashcards reinforce memory retention. Cultural notes teach the context behind phrases. Personalized learning paths adapt to your progress. LangLoop transforms learning into a global experience.",
+    "size": 153,
+    "reviews": 7120,
+    "ratingAvg": 4.8,
+    "downloads": 980000,
+    "ratings": [
+      { "name": "1 star", "count": 150 },
+      { "name": "2 star", "count": 270 },
+      { "name": "3 star", "count": 680 },
+      { "name": "4 star", "count": 1620 },
+      { "name": "5 star", "count": 4400 }
+    ]
+  },
+  {
+    "image": "https://example.com/images/tripnest.jpg",
+    "title": "TripNest",
+    "companyName": "SkyBound Studios",
+    "id": 6,
+    "description": "TripNest is the perfect companion for travel lovers. It curates destinations based on your interests and budget. Plan trips with detailed itineraries, maps, and local tips. The app syncs bookings, tickets, and hotel reservations in one place. Offline maps keep you guided anywhere. AI-driven suggestions recommend hidden gems nearby. You can connect with travelers for group adventures. Integrated expense tracking keeps your budget in check. Stunning photos and community stories add inspiration. Your next adventure starts with TripNest.",
+    "size": 110,
+    "reviews": 4890,
+    "ratingAvg": 4.3,
+    "downloads": 560000,
+    "ratings": [
+      { "name": "1 star", "count": 340 },
+      { "name": "2 star", "count": 510 },
+      { "name": "3 star", "count": 940 },
+      { "name": "4 star", "count": 1400 },
+      { "name": "5 star", "count": 1700 }
+    ]
+  },
+  {
+    "image": "https://example.com/images/musicbox.jpg",
+    "title": "MusicBox",
+    "companyName": "EchoWorks Media",
+    "id": 7,
+    "description": "MusicBox delivers high-quality streaming with personalized playlists. It learns your mood and recommends the perfect songs. Discover trending artists across genres and cultures. Download music for offline playback anytime. Social mode lets you share playlists with friends. The app provides equalizer control and lossless audio options. Live radio stations cover global hits and indie tracks. Seamless cross-device sync ensures playback continuity. Weekly charts help you stay on top of new releases. MusicBox is your portable concert hall.",
+    "size": 189,
+    "reviews": 10400,
+    "ratingAvg": 4.9,
+    "downloads": 2500000,
+    "ratings": [
+      { "name": "1 star", "count": 260 },
+      { "name": "2 star", "count": 320 },
+      { "name": "3 star", "count": 890 },
+      { "name": "4 star", "count": 2200 },
+      { "name": "5 star", "count": 6730 }
+    ]
+  },
+  {
+    "image": "https://example.com/images/shoplink.jpg",
+    "title": "ShopLink",
+    "companyName": "NovaCart Solutions",
+    "id": 8,
+    "description": "ShopLink connects shoppers with exclusive online deals instantly. Compare prices from multiple stores in real time. Personalized feeds show trending products that match your taste. One-tap checkout simplifies buying from verified vendors. Track orders, returns, and delivery updates easily. AI-based coupon finder ensures you never miss a discount. Secure payment options guarantee safe transactions. The wishlist system helps organize your next purchase. Users earn loyalty points for each transaction. Smart shopping made effortless with ShopLink.",
+    "size": 134,
+    "reviews": 8750,
+    "ratingAvg": 4.6,
+    "downloads": 1300000,
+    "ratings": [
+      { "name": "1 star", "count": 310 },
+      { "name": "2 star", "count": 400 },
+      { "name": "3 star", "count": 900 },
+      { "name": "4 star", "count": 2300 },
+      { "name": "5 star", "count": 4850 }
+    ]
+  }
+]
