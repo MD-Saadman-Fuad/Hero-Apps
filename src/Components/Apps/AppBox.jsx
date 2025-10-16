@@ -1,9 +1,10 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
 import AppCard from './AppCard';
+import { Link } from 'react-router-dom';
 const AppBox = () => {
     const appsPromise = fetch('./home.json').then(res => res.json()).then(data => data);
-    console.log(appsPromise);
+    // console.log(appsPromise);
     const [apps, setApps] = useState([]);
 
     useEffect(() => {
@@ -20,7 +21,7 @@ const AppBox = () => {
             <button className="btn mt-2 text-white" style={{
                 borderRadius: '4px',
                 background: 'linear-gradient(125.07deg, rgba(99,46,227,1), rgba(159,98,242,1) 100%)'
-            }}>Show All</button>
+            }}><Link to="/apps">Show All</Link></button>
         </div>
 
     );

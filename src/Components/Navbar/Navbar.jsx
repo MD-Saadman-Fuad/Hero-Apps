@@ -1,6 +1,7 @@
 import React from 'react';
 import { VscGithub } from "react-icons/vsc";
 import logo from '../../assets/images/logo.png'
+import { Link } from 'react-router-dom';
 const Navbar = () => {
     return (
         <div className="navbar bg-base-100 shadow-sm font-bold">
@@ -24,15 +25,16 @@ const Navbar = () => {
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1">
-                    <li><a>Home</a></li>
+                    <li><Link to={'/'}>Home</Link></li>
                     <li>
-                        <a href=""> Apps </a>
+                        <Link to={'/apps'}> Apps </Link>
                     </li>
+                    {/* <li><Link to={'/installation'}>Installation</Link></li> */}
                     <li><a>Installation</a></li>
                 </ul>
             </div>
             <div className="navbar-end " >
-                <a className="btn text-white" style={{
+                <a href='https://github.com/MD-Saadman-Fuad' className="btn text-white" style={{
   borderRadius: '4px',
   background: 'linear-gradient(125.07deg, rgba(99,46,227,1), rgba(159,98,242,1) 100%)'
 }}><VscGithub /> Contribute</a>
