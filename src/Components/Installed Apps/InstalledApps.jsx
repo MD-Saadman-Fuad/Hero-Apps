@@ -83,7 +83,7 @@ const InstalledApps = () => {
 
                             </div>
                             <div>
-                                <button className='btn btn-ghost  text-red-500' onClick={() => handleRemove(app.id)}
+                                <button className='btn mt-2 btn-ghost  text-red-500' onClick={() => handleRemove(app.id)}
                                         style={{
                                 borderRadius: '4px',
                                 background: 'var(--Style, rgba(0, 211, 144, 1))',
