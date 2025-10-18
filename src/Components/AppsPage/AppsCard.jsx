@@ -1,6 +1,7 @@
 import React from 'react';
 import downloadIcon from '../../assets/images/download.png'
 import starIcon from '../../assets/images/rating.png'
+import { Link } from 'react-router-dom';
 const AppCard = ({ app }) => {
 //     {
 //     "image": "https://i.ibb.co.com/KjCvwfbB/demo-app-3.webp",
@@ -22,7 +23,8 @@ const AppCard = ({ app }) => {
 //   }
     const {image, title, downloads, ratingAvg } = app;
     return (
-        <div className="card w-full bg-base-100  shadow-sm m-1">
+        <Link to={`/appdetails/${app.id}`}>
+            <div   className="card w-full bg-base-100  shadow-sm m-1">
             <figure className="px-10 pt-10">
                 <img
                     src={image}
@@ -38,6 +40,7 @@ const AppCard = ({ app }) => {
                 </div>
             </div>
         </div>
+        </Link>
     );
 };
 

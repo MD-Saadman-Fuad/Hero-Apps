@@ -4,8 +4,8 @@ import Root from "../Pages/Root/Root";
 import Home from "../Pages/Home/Home";
 import ErrorPage from "../Pages/ErrorPage/ErrorPage";
 import AppsList from "../Components/AppsPage/AppsList";
-
-
+import InstalledApps from "../Components/Installed Apps/InstalledApps";
+import AppDetails from "../Components/AppDetails/AppDetails";
 
 export const router = createBrowserRouter([
   {
@@ -20,6 +20,20 @@ export const router = createBrowserRouter([
     {
         path: '/apps',
         Component: AppsList,
+    },
+    {
+        path: '/installation',
+        Component: InstalledApps,
+    },
+    {
+        path: '/appdetails/:id',
+    // fetch from public root and return parsed JSON so useLoaderData() receives the array
+    loader: async () => {
+      const res = await fetch('/extended.json');
+      if (!res.ok) throw new Response('Failed to load data', { status: res.status });
+      return res.json();
+    },
+        Component: AppDetails
     }
         
     ]

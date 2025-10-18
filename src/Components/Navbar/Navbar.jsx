@@ -13,12 +13,12 @@ const Navbar = () => {
                     <ul
                         tabIndex="-1"
                         className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
-                        <li><a>Home</a></li>
+                        <li><Link to={'/'}>Home</Link></li>
                         <li>
-                            <a>Apps</a>
+                            <Link to={'/apps'}> Apps </Link>
 
                         </li>
-                        <li><a>Installation</a></li>
+                        <li><Link to={'/installation'}>Installation</Link></li>
                     </ul>
                 </div>
                 <a className="btn btn-ghost text-xl text-purple-600 font-bold"><img src={logo} className='w-[30px]' alt="" />HERO.IO</a>
@@ -30,7 +30,7 @@ const Navbar = () => {
                         <Link to={'/apps'}> Apps </Link>
                     </li>
                     {/* <li><Link to={'/installation'}>Installation</Link></li> */}
-                    <li><a>Installation</a></li>
+                    <li><Link to={'/installation'}>Installation</Link></li>
                 </ul>
             </div>
             <div className="navbar-end " >

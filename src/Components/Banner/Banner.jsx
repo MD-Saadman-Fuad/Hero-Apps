@@ -2,6 +2,7 @@ import React from 'react';
 import Playstore from '../../assets/images/button/googleplay.png'
 import Appstore from '../../assets/images/button/appstore.png'
 import bannerImg from '../../assets/images/hero.png'
+import { Link } from 'react-router-dom';
 const Banner = () => {
     return (
         <div className=" pt-5" >
@@ -13,9 +14,9 @@ const Banner = () => {
                     <p className='text-sm font-semibold text-gray-600'>At HERO.IO , we craft innovative apps designed to make everyday life simpler, smarter, and more exciting. Our goal is to turn your ideas into digital experiences that truly make an impact.</p>
                     
                 </div>
-                <div className='w-[120px] mx-auto flex items-center justify-center gap-5 mt-5'>
-                    <img src={Playstore} alt="Google Play Store" />
-                    <img src={Appstore} alt="Apple App Store" />
+                <div className=' mx-auto flex items-center justify-center gap-5 mt-5'>
+                    <Link to="https://play.google.com/store/games?hl=en"><img className='w-[150px]' src={Playstore} alt="Google Play Store" /></Link>
+                    <Link to="https://www.apple.com/app-store/"><img className='w-[150px]' src={Appstore} alt="Apple App Store" /></Link>
                 </div>
                 <div className='mx-auto flex items-center justify-center mt-5'>
                     <img src={bannerImg} alt="Banner" />
