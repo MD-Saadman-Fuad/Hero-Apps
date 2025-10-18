@@ -15,6 +15,7 @@ import {
     LabelList,
 } from 'recharts';
 import {getInstalledApps, addToStoreDB} from '../../Utility/Utility';
+import { toast } from 'react-toastify';
 import Loading from '../Loading/Loading';
 import AppsError from '../AppsError/AppsError';
 const AppDetails = () => {
@@ -69,10 +70,19 @@ const AppDetails = () => {
                     </div>
                     <div className='mt-5'>
                         <button
-                            className='btn'
-                            onClick={() => {setInstalled(true)
-                                addToStoreDB(appId);
+                            className={`btn ${installed ? 'btn-disabled opacity-60 cursor-not-allowed' : ''}`}
+                            onClick={() => {
+                                if (installed) return;
+                                setInstalled(true);
+                                try {
+                                    addToStoreDB(appId);
+                                    toast.success('App installed successfully');
+                                } catch (err) {
+                                    console.error(err);
+                                    toast.error('Failed to install app');
+                                }
                             }}
+                            disabled={installed}
                             style={{
                                 borderRadius: '4px',
                                 background: 'var(--Style, rgba(0, 211, 144, 1))',

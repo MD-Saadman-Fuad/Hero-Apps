@@ -2,6 +2,7 @@ import React from 'react';
 import errorPic from '../../assets/images/Error.png'
 import Navbar from '../../Components/Navbar/Navbar';
 import Footer from '../../Components/Footer/Footer';
+import { Link } from 'react-router-dom';    
 const ErrorPage = () => {
     return (
         <div>
@@ -13,7 +14,7 @@ const ErrorPage = () => {
                 <button className="btn text-white" style={{
                     borderRadius: '4px',
                     background: 'linear-gradient(125.07deg, rgba(99,46,227,1), rgba(159,98,242,1) 100%)'
-                }}>Go Back</button>
+                }}><Link to={'/'}>Go Back</Link></button>
             </div>
             <Footer></Footer>
         </div>

@@ -21,7 +21,7 @@ const Navbar = () => {
                         <li><Link to={'/installation'}>Installation</Link></li>
                     </ul>
                 </div>
-                <a className="btn btn-ghost text-xl text-purple-600 font-bold"><img src={logo} className='w-[30px]' alt="" />HERO.IO</a>
+                <Link to={'/'}><a className="btn btn-ghost text-xl text-purple-600 font-bold"><img  src={logo} className='w-[30px]' alt="" />HERO.IO</a></Link>
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1">

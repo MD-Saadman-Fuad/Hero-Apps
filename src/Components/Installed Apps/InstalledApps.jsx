@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { TbTriangleInvertedFilled } from "react-icons/tb";
 import { getInstalledApps, removeFromStoreDB, sortApps } from '../../Utility/Utility';
+import { toast } from 'react-toastify';
 import downloadIcon from '../../assets/images/download.png'
 import starIcon from '../../assets/images/rating.png'
 import AppsError from '../AppsError/AppsError';
@@ -36,6 +37,9 @@ const InstalledApps = () => {
         const ok = removeFromStoreDB(id);
         if (ok) {
             setInstalledIds(getInstalledApps());
+            toast.success('App uninstalled');
+        } else {
+            toast.error('Failed to uninstall app');
         }
     }
 
@@ -70,7 +74,7 @@ const InstalledApps = () => {
                     <div className='text-gray-600 col-span-full'><AppsError /></div>
                 ) : (
                     installedApps.map(app => (
-                        <div key={app.id} className='p-4 border rounded flex items-center gap-4'>
+                        <div key={app.id} className='p-4 border rounded flex-row md:flex items-center gap-4'>
                             <img src={app.image} alt={app.title} className='w-20 h-20 object-cover rounded' />
                             <div className='flex-1'>
                                 <h3 className='font-semibold'>{app.title}</h3>
@@ -79,7 +83,7 @@ const InstalledApps = () => {
 
                             </div>
                             <div>
-                                <button className='btn btn-ghost text-red-500' onClick={() => handleRemove(app.id)}>Uninstall</button>
+                                <button className='btn btn-ghost  text-red-500' onClick={() => handleRemove(app.id)}>Uninstall</button>
                             </div>
                         </div>
                     ))
