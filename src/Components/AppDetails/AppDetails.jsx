@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { useLoaderData, useParams } from 'react-router-dom';
 import downloadIcon from '../../assets/images/download.png';
 import starIcon from '../../assets/images/rating.png';
@@ -14,22 +14,34 @@ import {
     Legend,
     LabelList,
 } from 'recharts';
+import {getInstalledApps, addToStoreDB} from '../../Utility/Utility';
+import Loading from '../Loading/Loading';
+import AppsError from '../AppsError/AppsError';
 const AppDetails = () => {
+    const [installed, setInstalled] = useState(false);
     const { id } = useParams();
     const appId = parseInt(id);
+    useEffect(() => {
+        const ids = getInstalledApps();
+        const found = ids.some(a => Number(a) === appId);
+        setInstalled(found);
+    }, [appId]);
+
     const app = useLoaderData();
-    console.log(app);
-    // defensive checks: ensure loader returned an array
-    if (!app || !Array.isArray(app)) return <div className="p-8 text-center">Loading app details...</div>;
+    // console.log(app);
+
+
+    if (!app || !Array.isArray(app)) return <div className="p-8 text-center"><Loading /></div>;
 
     const singleApp = app.find(a => Number(a.id) === appId);
 
-    if (!singleApp) return <div className="p-8 text-center">App not found.</div>;
+    if (!singleApp) return <div className="p-8 text-center"><AppsError /></div>;
 
     const { title, image, description, companyName, size, downloads, ratingAvg } = singleApp;
 
-    // prepare ratings data for the chart: expect [{ name, count }, ...]
+    
     const ratingsData = Array.isArray(singleApp.ratings) ? singleApp.ratings.map(r => ({ name: r.name, count: r.count })) : [];
+    
 
     return (
         <div className=''>
@@ -58,13 +70,16 @@ const AppDetails = () => {
                     <div className='mt-5'>
                         <button
                             className='btn'
+                            onClick={() => {setInstalled(true)
+                                addToStoreDB(appId);
+                            }}
                             style={{
                                 borderRadius: '4px',
                                 background: 'var(--Style, rgba(0, 211, 144, 1))',
                                 color: '#fff'
                             }}
                         >
-                            Install Now ({size}MB)
+                            {installed ? 'Installed' : 'Install Now'} ({size}MB)
                         </button>
                     </div>
                 </div>
@@ -75,16 +90,16 @@ const AppDetails = () => {
                     <div className="text-sm text-gray-600">No rating data available.</div>
                 ) : (
                     <ResponsiveContainer width="100%" height={500}>
-                        {/* layout="vertical" makes horizontal bars (categories on Y, values on X) */}
+                        
                         <BarChart data={ratingsData} layout="vertical" margin={{ top: 20, right: 30, left: 40, bottom: 5 }}>
                             <CartesianGrid strokeDasharray="3 3" />
-                            {/* For vertical layout (horizontal bars): XAxis is numeric, YAxis is category */}
+                            
                             <XAxis type="number" />
                             <YAxis dataKey="name" type="category" />
                             <Tooltip formatter={(value) => [value, 'Count']} />
                             <Legend />
                             <Bar dataKey="count" name="Ratings" fill="#f97316" barSize={40} radius={[6,6,6,6]}>
-                                {/* show labels to the right of bars */}
+                                
                                 <LabelList dataKey="count" position="right" />
                             </Bar>
                         </BarChart>

@@ -23,11 +23,15 @@ export const router = createBrowserRouter([
     },
     {
         path: '/installation',
+        loader: async () => {
+            const res = await fetch('/extended.json');
+            if (!res.ok) throw new Response('Failed to load data', { status: res.status });
+            return res.json();
+          },
         Component: InstalledApps,
     },
     {
         path: '/appdetails/:id',
-    // fetch from public root and return parsed JSON so useLoaderData() receives the array
     loader: async () => {
       const res = await fetch('/extended.json');
       if (!res.ok) throw new Response('Failed to load data', { status: res.status });

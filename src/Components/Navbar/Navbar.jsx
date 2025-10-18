@@ -29,7 +29,6 @@ const Navbar = () => {
                     <li>
                         <Link to={'/apps'}> Apps </Link>
                     </li>
-                    {/* <li><Link to={'/installation'}>Installation</Link></li> */}
                     <li><Link to={'/installation'}>Installation</Link></li>
                 </ul>
             </div>
