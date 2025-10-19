@@ -39,7 +39,12 @@ export const router = createBrowserRouter([
     },
         Component: AppDetails
     }
-        
+    ,
+    // client-side catch-all: show ErrorPage for any unmatched route
+    {
+      path: '*',
+      Component: ErrorPage,
+    }
     ]
   },
 ]);

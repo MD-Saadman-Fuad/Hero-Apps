@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 const ErrorPage = () => {
     return (
         <div>
-            <Navbar></Navbar>
+            
             <div className='items-center text-center mx-auto m-20'>
                 <img className='mx-auto max-w-xs md:max-w-md' src={errorPic} alt="Error" />
                 <h1 className='font-bold text-4xl m-2'>Oops, page not found!</h1>
@@ -16,7 +16,7 @@ const ErrorPage = () => {
                     background: 'linear-gradient(125.07deg, rgba(99,46,227,1), rgba(159,98,242,1) 100%)'
                 }}><Link to={'/'}>Go Back</Link></button>
             </div>
-            <Footer></Footer>
+            
         </div>
     );
 };
