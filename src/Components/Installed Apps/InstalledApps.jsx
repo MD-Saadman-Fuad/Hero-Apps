@@ -50,15 +50,15 @@ const InstalledApps = () => {
                 <p className='mt-3'>Explore All Trending Apps on the Market developed by us</p>
             </div>
 
-            <div className='flex justify-between items-center mx-10 mb-5'>
-                <h1> ({installedIds.length}) - Apps Found</h1>
+            <div className='flex justify-between items-center mx-10 mb-5 '>
+                <h1 className='font-bold'> ({installedIds.length}) - Apps Found</h1>
                 <div className='flex items-center gap-3'>
                     <label className='text-sm'>Sort by</label>
                     <select value={sortKey} onChange={e => setSortKey(e.target.value)} className='select select-bordered'>
                         <option value="">None</option>
                         <option value="downloads">Most downloaded</option>
-                        <option value="rating">Highest rated</option>
-                        <option value="size">Smallest size</option>
+                        <option value="rating">Rating</option>
+                        <option value="size">Size</option>
                     </select>
                     <select value={sortOrder} onChange={e => setSortOrder(e.target.value)} className='select select-bordered'>
                         <option value="desc">Desc</option>
