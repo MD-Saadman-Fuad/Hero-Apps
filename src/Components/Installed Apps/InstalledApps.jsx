@@ -28,7 +28,7 @@ const InstalledApps = () => {
             .finally(() => { if (!cancelled) setLoading(false); });
         return () => { cancelled = true; };
     }, []);
-    // normalize id comparison by comparing strings to avoid type mismatches
+
     const installedIdsSet = new Set((installedIds || []).map(String));
     const installedAppsRaw = (allApps || []).filter(Boolean).filter(a => installedIdsSet.has(String(a.id)));
     const installedApps = sortKey ? sortApps(installedAppsRaw, sortKey, sortOrder) : installedAppsRaw;
